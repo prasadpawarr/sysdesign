@@ -21,3 +21,50 @@ service is scalable if increase resources in system, increases performance of sy
     - get rid of obj when something changes
     - async processing possible
     - what to cache: user sessions, rendered blog articles.
+
+## scale zero to millions
+
+### nosql
+use this when:
+
+- app required super low-latency
+- data is unstructured
+- serialize and deserialize (json)
+- store massive amount of data
+
+### vertical scaling 
+- scale up
+- adding more power (CPU/RAM/storage)
+- pros:
+    - simple, easy to scale
+    - good if less traffic
+- cons:
+    - hard limit
+    - failover, redundancy not possible
+
+### horizontal scaling
+- scale out
+- adding more servers
+- pros:
+    - good for large scale apps
+    - provides redundancy incase of failure
+
+### load balancers
+- need for load balancer because of horizontal scaling
+
+### db replication
+- provides reliability, availability
+- improves performance
+- usually master-slave architecture
+- master: supports only write-ops
+- slave: supports only read-ops (multiple slaves - apps usually read heavy)
+
+### summary
+- Keep web tier stateless
+- Build redundancy at every tier
+- Cache data as much as you can
+- Support multiple data centers
+- Host static assets in CDN
+- Scale your data tier by sharding
+- Split tiers into individual services
+- Monitor your system and use automation tools

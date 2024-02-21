@@ -15,11 +15,12 @@ INDEX:
 - data structure (b-tree) that has pointers to HEAP
 - tells you excatly which page to fetch from HEAP
 
-### ROW store / ROW oriented
+PRIMARY KEY
 - 
 
 
-### COLUMN store / Columnar 
+SECONDARY KEY
+
 
 
 ### Indexing
